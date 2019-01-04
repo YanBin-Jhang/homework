@@ -11,9 +11,13 @@ public class BuyInfo {
     }
 
     public void print() {
-        int totalPrice = (int) ((totalTicket - roundTripTicket) * ticketPrice + (roundTripTicket * ticketPrice * 2 * 0.9));
+        int totalPrice = calculate();
         System.out.println("Total tickets:" + totalPrice + "\n" +
                 "Round-trip:" + totalPrice + "\n" +
-                "Total:" + totalPrice);
+                "Total:" + totalPrice + "\n");
+    }
+
+    public int calculate() {
+        return (int) ((totalTicket - roundTripTicket) * ticketPrice + (roundTripTicket * ticketPrice * 2 * 0.9));
     }
 }
