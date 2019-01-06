@@ -9,13 +9,14 @@ fun main(args: Array<String>) {
         println("If you want to quit, please enter -1")
         print("Please enter number of tickets:")
         totalTicket = scanner.nextInt()
-        if (totalTicket != -1) {
+        if (totalTicket == -1) {
+            println("Good Bye")
+            break
+        } else {
             print("How many round-trip tickets:")
             var roundTripTicket = scanner.nextInt()
             val info = BuyInfoKt(totalTicket, roundTripTicket)
             info.print()
-        } else {
-            println("Good Bye")
         }
     }
 }

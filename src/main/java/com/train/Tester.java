@@ -10,13 +10,14 @@ public class Tester {
             System.out.println("If you want to quit, please enter -1");
             System.out.print("Please enter number of tickets:");
             totalTicket = scanner.nextInt();
-            if (totalTicket != -1) {
+            if (totalTicket == -1) {
+                System.out.println("Good Bye");
+                break;
+            } else {
                 System.out.print("How many round-trip tickets:");
                 int roundTripTicket = scanner.nextInt();
                 BuyInfo info = new BuyInfo(totalTicket, roundTripTicket);
                 info.print();
-            } else {
-                System.out.println("Good Bye");
             }
         }
     }
